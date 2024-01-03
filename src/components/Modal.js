@@ -15,9 +15,7 @@ const Modal = ({ show, setShowModal }) => {
   const queryClientt = useQueryClient();
 
   const mutation = useMutation({
-    mutationFn: (newPet) => {
-      return createPet(newPet);
-    },
+    mutationFn: (newPet) => createPet(newPet),
     onSuccess: () => {
       queryClientt.invalidateQueries(["test"]);
       setShowModal(false);

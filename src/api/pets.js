@@ -7,7 +7,6 @@ const getAllPets = async () => {
 
 const getPetById = async (id) => {
   const res = await getAllPets();
-
   return res.data.find((pet) => pet?.id == id);
 };
 
